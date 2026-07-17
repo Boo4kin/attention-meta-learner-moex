@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this project, please cite the thesis and repository."
+title: "Attention Meta-Learner for MOEX Si Futures"
+type: software
+authors:
+  - family-names: "Bukin"
+    given-names: "Nikolay Andreevich"
+repository-code: "https://github.com/Boo4kin/attention-meta-learner-moex"
+url: "https://github.com/Boo4kin/attention-meta-learner-moex"
+version: "1.0.0"
+date-released: "2026-07-17"
+keywords:
+  - ensemble learning
+  - attention mechanism
+  - algorithmic trading
+  - time series
+  - MOEX
