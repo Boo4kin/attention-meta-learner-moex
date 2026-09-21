@@ -9,7 +9,7 @@
 
 > Исследование перспектив развития коллективных методов интеллектуальной обработки больших объёмов биржевых данных с целью улучшения качества краткосрочных прогнозов изменения цен.
 
-[Диплом (PDF)](docs/thesis.pdf) · [Презентация (PDF)](docs/presentation.pdf) · [Исследовательский ноутбук](notebooks/attention_meta_learner.ipynb) · [Интерактивный дашборд](app.py)
+[English README](README.en.md) · [Диплом (PDF)](docs/thesis.pdf) · [Презентация (PDF)](docs/presentation.pdf) · [Исследовательский ноутбук](notebooks/attention_meta_learner.ipynb) · [Интерактивный дашборд](app.py)
 
 ![Итоговые результаты эксперимента](assets/final_results.png)
 
