@@ -1,0 +1,27 @@
+name: One-time branch cleanup
+
+on:
+  push:
+    paths:
+      - ".github/workflows/cleanup-branches.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete non-default branches
+        env:
+          GH_TOKEN: ${{ github.token }}
+          REPO: ${{ github.repository }}
+          DEFAULT_BRANCH: ${{ github.event.repository.default_branch }}
+        run: |
+          gh api --paginate "repos/$REPO/branches?per_page=100" --jq '.[].name' |
+          while IFS= read -r branch; do
+            if [ "$branch" != "$DEFAULT_BRANCH" ]; then
+              echo "Deleting $branch"
+              gh api -X DELETE "repos/$REPO/git/refs/heads/$branch"
+            fi
+          done
